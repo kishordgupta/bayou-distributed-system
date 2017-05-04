@@ -1,0 +1,27 @@
+
+BUILD COMMAND:
+
+gcc -o kda  kd1.cpp -lglut -lGLU -lpthread
+
+
+RUN: BY CLICK THE KDA executable
+
+NOTE: Replica.csv file need to be with samefolder at executables.
+
+Host in multt computer:
+
+Need to add IP and port in Code deptips and deptsport array for respective department
+
+To assign department in define select the number of the dept. 0 to 9
+
+
+///////////////////////////////How to us///////////////////////
+
+Click in a roombooked data in UI and press B will booked that room . 
+For refresing data need a mousclick on UI. 
+Need to close by ESC to proper save of data
+/////////////////////////////////////////////////
+
+
+
+Special Notes: Its only provide data for one day

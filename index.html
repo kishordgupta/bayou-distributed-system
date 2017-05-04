@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="utf-8" />
+        <title>Read File (via AJAX)</title>
+        <style>
+            body{
+                margin: 0 auto;
+                max-width: 1100px;
+                width: 100%;
+            }
+            table{
+                border-collapse: collapse;
+                width: 100%;
+            }
+            table, td{
+                border: 1px solid;
+                padding: 5px;
+            }
+        </style>
+        <script type="text/javascript" src="parseCSV.js"></script>
+        <script type="text/javascript">
+            var reader1 = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+            var reader2 = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+            var reader3 = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+            var reader4 = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+            var reader5 = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+            var reader6 = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+            var reader7 = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+            var reader8 = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+            var reader9 = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+            var reader10 = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+            function loadFile() {
+                reader1.open('get', 'dept1/replica.csv', true);
+                reader1.onreadystatechange = displayContents1;
+                reader1.send(null);
+                reader2.open('get', 'dept2/replica.csv', true);
+                reader2.onreadystatechange = displayContents2;
+                reader2.send(null);
+                reader3.open('get', 'dept3/replica.csv', true);
+                reader3.onreadystatechange = displayContents3;
+                reader3.send(null);
+                reader4.open('get', 'dept4/replica.csv', true);
+                reader4.onreadystatechange = displayContents4;
+                reader4.send(null);
+                reader5.open('get', 'dept5/replica.csv', true);
+                reader5.onreadystatechange = displayContents5;
+                reader5.send(null);
+                reader6.open('get', 'dept6/replica.csv', true);
+                reader6.onreadystatechange = displayContents6;
+                reader6.send(null);
+                reader7.open('get', 'dept7/replica.csv', true);
+                reader7.onreadystatechange = displayContents7;
+                reader7.send(null);
+                reader8.open('get', 'dept8/replica.csv', true);
+                reader8.onreadystatechange = displayContents8;
+                reader8.send(null);
+                reader9.open('get', 'dept9/replica.csv', true);
+                reader9.onreadystatechange = displayContents9;
+                reader9.send(null);
+                reader10.open('get', 'dept10/replica.csv', true);
+                reader10.onreadystatechange = displayContents10;
+                reader10.send(null);
+
+
+            }
+
+
+            function displayContents1() {
+                
+                if (reader1.readyState === 4) {
+                    document.getElementById('main1').innerHTML = "<h3>DEPT 1<\h3>";
+                    shhhCSVParser.init(reader1.responseText, 'main1');
+                }
+
+            }
+
+            function displayContents2() {
+                if (reader1.readyState === 4) {
+                     document.getElementById('main2').innerHTML = "<h3>DEPT 2<\h3>";
+                    shhhCSVParser.init(reader2.responseText, 'main2');
+                }
+
+            }
+
+            function displayContents3() {
+                 document.getElementById('main3').innerHTML = "<h3>DEPT 3<\h3>";
+                    shhhCSVParser.init(reader3.responseText, 'main3');
+
+            }
+
+            function displayContents4() {
+                 document.getElementById('main4').innerHTML = "<h3>DEPT 4<\h3>";
+                    shhhCSVParser.init(reader4.responseText, 'main4');
+
+            }
+
+            function displayContents5() {
+                document.getElementById('main5').innerHTML = "<h3>DEPT 5<\h3>";
+                    shhhCSVParser.init(reader5.responseText, 'main5');
+
+            }
+
+            function displayContents6() {
+                document.getElementById('main6').innerHTML = "<h3>DEPT 6<\h3>";
+                    shhhCSVParser.init(reader6.responseText, 'main6');
+
+            }
+
+            function displayContents7() {
+                 document.getElementById('main7').innerHTML = "<h3>DEPT 7<\h3>";
+                    shhhCSVParser.init(reader7.responseText, 'main7');
+
+            }
+
+            function displayContents8() {
+                 document.getElementById('main8').innerHTML = "<h3>DEPT 8<\h3>";
+                    shhhCSVParser.init(reader8.responseText, 'main8');
+
+            }
+
+            function displayContents9() {
+                 document.getElementById('main9').innerHTML = "<h3>DEPT 9<\h3>";
+                    shhhCSVParser.init(reader9.responseText, 'main9');
+            }
+
+            function displayContents10() {
+                  document.getElementById('main10').innerHTML = "<h3>DEPT 10<\h3>";
+                    shhhCSVParser.init(reader10.responseText, 'main10');
+
+            }
+
+
+
+        </script>
+    </head>
+    <body onload="loadFile();">
+        <div id="container">
+
+
+            <div id="main1">
+            </div>
+            <div id="main2">
+            </div>
+            <div id="main3">
+            </div>
+            <div id="main4">
+            </div>
+            <div id="main5">
+            </div>
+            <div id="main6">
+            </div>
+            <div id="main7">
+            </div>
+            <div id="main8">
+            </div>
+            <div id="main9">
+            </div>
+            <div id="main10">
+            </div>
+        </div>
+    </body>
+</html>
